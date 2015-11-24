@@ -26,8 +26,8 @@
       	alert("error:"+error);
     });
     
-### 开启码枪
-	window.plugins.bqscanner.start(
+### 开启码枪 0 广播，1键盘
+	window.plugins.bqscanner.openScanner("0",
     function(succ){
       alert(succ);
   	},
@@ -36,7 +36,7 @@
     });
        
 ### 关闭码枪
-	window.plugins.bqscanner.stop(
+	window.plugins.bqscanner.closeScanner(
     function(succ){
       alert(succ);
   	},
