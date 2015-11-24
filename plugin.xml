@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<plugin xmlns="http://apache.org/cordova/ns/plugins/1.0" xmlns:android="http://schemas.android.com/apk/res/android" id="cn.bqmart.plugin.bqscanner" version="0.0.4">
+  <name>bqscanner</name>
+  <js-module name="BQscanner" src="www/bqscanner.js">
+    <clobbers target="cordova.plugins.bqscanner"/>
+  </js-module>
+  <platform name="android">
+    <config-file parent="/*" target="res/xml/config.xml">
+      <feature name="BQscanner">
+        <param name="android-package" value="cn.bqmart.plugin.bqscanner.BQscanner"/>
+      </feature>
+    </config-file>
+    <config-file parent="/*" target="AndroidManifest.xml"/>
+    <source-file src="src/android/BQscanner.java" target-dir="src/cn/bqmart/plugin/bqscanner"/>
+    <source-file src="src/android/scanSDK.jar" target-dir="libs"/>
+  </platform>
+</plugin>
